@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single File Cell</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 1rem;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        main {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            margin: 1rem 0;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        pre {
+            background: #e9ecef;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Cell</h1>
+    </header>
+    <main>
+        <h2>Interactive Features</h2>
+        <p>Explore the functionality of this all-in-one file!</p>
+        <button id="showMessageButton">Show Message</button>
+        <button id="loadContentButton">Load Content</button>
+        <div id="output"></div>
+        <pre id="dynamicContent">Dynamic content will load here...</pre>
+    </main>
+    <footer>
+        <p>&copy; 2025 3dvr.tech | Built with simplicity.</p>
+    </footer>
+    <script>
+        // Handle button click to show a message
+        document.getElementById('showMessageButton').addEventListener('click', () => {
+            document.getElementById('output').innerHTML = '<p style="color: green;">Hello, this is your message!</p>';
+        });
+
+        // Handle button click to load dynamic content
+        document.getElementById('loadContentButton').addEventListener('click', () => {
+            const content = `
+==================
+Dynamic Content
+==================
+This is a dynamically loaded content section.
+
+You can modify this inline in the script.
+            `;
+            document.getElementById('dynamicContent').textContent = content;
+        });
+    </script>
+</body>
+</html>
